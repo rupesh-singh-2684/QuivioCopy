@@ -159,7 +159,7 @@ export default class LoginPage extends Component {
         const { emailValid, passwordValid, emailErrorMessage,isModalVisible ,isPasswordVisible,passwordErrorMessage } = this.state;
         return (
             <KeyboardAvoidingView
-                behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+                behavior={Platform.OS === 'ios' ? 'padding' : 'padding'}
                 keyboardVerticalOffset={180}
                 style={styles.keyboardView}>
                 {/* <View style={{ flex: 1 }}> */}
