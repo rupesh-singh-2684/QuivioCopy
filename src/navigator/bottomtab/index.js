@@ -50,7 +50,7 @@ export default class BottomTab extends Component {
                      source={iconname}
                      style={{width:22,height:22,}}/>            
                 }
-            })}>
+            })} initialRouteName="Home">
                 <Tab.Screen
                     component={TwoFA}
                     name={ScreenNames.Home}

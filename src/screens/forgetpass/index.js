@@ -104,17 +104,19 @@ export default class ForgetPassword extends Component {
                     </View>
                     <View style={styles.container2}>
 
-
                         <View style={styles.TextView}>
                             <Text style={styles.Title1}>Forgot Password</Text>
                             <Text style={styles.Title2}>Reset your password with just a few clicks</Text>
 
                             <EmailInput
+                                pass={'Email address'}
                                 onChangeText={this.handleEmailChange}
                                 onBlur={this.handleBlurEmail}
                                 isValid={emailValid}
-                                errorMessage={emailErrorMessage} />
-
+                                errorMessage={emailErrorMessage} 
+                                img={require('/Users/admin/Desktop/QuivioUI/src/assets/icons/email.png')}
+                                />
+                                
                         </View>
                         <View style={styles.ButtomDiv}>
                             <Button title={'Send Link'} onPress={this.handleButtonPress} />

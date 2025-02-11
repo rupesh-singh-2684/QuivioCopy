@@ -1,9 +1,10 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     container:{
     flexDirection:'row',
-    padding:15,
+    paddingVertical:Platform.OS === 'ios' ? 12 : 0,
+    paddingHorizontal:Platform.OS === 'ios' ? 12 : 12,
     borderRadius:8,
     alignItems:'center',
     backgroundColor:'white',
@@ -14,7 +15,8 @@ const styles = StyleSheet.create({
     placeholdertext:{
         marginLeft:10,
         paddingHorizontal:8,
-        flex:1
+        flex:1,
+    
     },
     img:{
         height:24,

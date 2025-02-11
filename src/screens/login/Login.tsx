@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { SafeAreaView, View, Text, Image, ImageBackground, KeyboardAvoidingView, Platform, Alert, Modal, Dimensions} from "react-native";
 import Images from "../../assets/images";
-import styles from "./styles";
+import styles from "./StylesLogin";
 // import { FlatList } from "react-native";
 import Button from "../../components/button/button";
 import PasswordInput from "../../components/passwordinput/passwordinput";
@@ -9,7 +9,6 @@ import EmailInput from "../../components/emailinput/emailinput";
 import AutoScroll from "@homielab/react-native-auto-scroll";
 import Toast from 'react-native-toast-message';
 import CustomToast from "../../components/customToast";
-import Icons from "../../assets/icons";
 
 // const arr = [
 //     {
@@ -34,7 +33,7 @@ var attempts = 0
 const defaultMail = 'Rs@gmail.com'
 const defaultPass = 'Rupesh@1234'
 
-export default class LoginPage extends Component {
+export default class Login extends Component {
     state = {
         email: '',
         password: '',
@@ -160,31 +159,17 @@ export default class LoginPage extends Component {
        const height =  Dimensions.get('window').height;
         const { emailValid, passwordValid, emailErrorMessage,isModalVisible ,isPasswordVisible,passwordErrorMessage } = this.state;
         return (
-            <KeyboardAvoidingView
-                behavior={Platform.OS === 'ios' ? 'padding' : 'padding'}
-                keyboardVerticalOffset={ height > 900 ? 210: 20}
-                style={styles.keyboardView}>
-                {/* <View style={{ flex: 1 }}> */}
-                <View style={styles.view1}>
-                    <ImageBackground source={Images.HalfScreen}
-                        style={styles.BgImg}
-                    />
-                    <View style={styles.container2}>
-                        <Image source={Images.Logo}
+            <View style={{flex:1}}>
+                <ImageBackground style={{flex:0.45,backgroundColor:'red'}} source={Images.HalfScreen}>
+                    <View>
+                    <Image source={Images.Logo}
                             style={styles.Img} />
-
                         <Text style={styles.Title1}>
                             QUIVIO
                         </Text>
                         <Text style={styles.Title2}>
                             Your Personal CarWash Assistant
                         </Text>
-                        {/* <FlatList
-                            data={arr}
-                            horizontal={true}
-                            showsHorizontalScrollIndicator={true}
-                            renderItem={this.renderItem}
-                        /> */}
                         <AutoScroll endPaddingWidth={0}>
                             <View style={styles.listContainer}>
                                 <Image source={Images.graph} style={styles.listIcon} />
@@ -198,57 +183,11 @@ export default class LoginPage extends Component {
                             </View>
                         </AutoScroll>
                     </View>
+                </ImageBackground>
+                <View style={{flex:0.55,backgroundColor:'blue'}}> 
+                    
                 </View>
-                <View style={styles.view2}>
-                    <View style={styles.signinview2}>
-                    <View style={styles.signinView}>
-                        <Text style={styles.textHead2}>Sign in</Text>
-                        <Text style={styles.text2}>with your valid credentials</Text>
-                        <EmailInput
-                            pass={'Email address'}
-                            onChangeText={this.handleEmailChange}
-                            onBlur={this.handleBlurEmail}
-                            isValid={emailValid}
-                            errorMessage={emailErrorMessage}
-                            img = {Icons.Email}
-                        />
-                        <PasswordInput
-                            pass={'Password'}
-                            onChangeText={this.handlePasswordChange}
-                            onBlur={this.handleBlurPassword}
-                            isValid={passwordValid}
-                            isPasswordVisible={isPasswordVisible}
-                            onPress={this.PasswordVisibility}
-                            errorMessage={passwordErrorMessage}
-                            img ={Icons.pass}
-                        />
-                        <View style={styles.forgetdiv}>
-                            <Text onPress={this.handleNav}>Forget Password</Text>
-                        </View>
-                        <Button title={'Primary'} onPress={this.handleButtonPress} />
-                    </View>
-                    </View>
-                </View>
-                {/* </View> */}
-                <Modal
-                    transparent={true}
-                    visible={isModalVisible}
-                    animationType="slide"
-                >
-                    <View style={styles.modalContainer}>
-                        <View style={styles.modalContent}>
-                            <Image source={Images.AccountLocked} style={styles.ModalImg} />
-                            <Text style={styles.modalTitle}>Account Locked</Text>
-                            <Text style={styles.modalMessage}>
-                                Your account has been locked due to too many failed login attempts. Please try again after some time.
-                            </Text>
-                            <Button title="Okay" onPress={this.closeModal} />
-                        </View>
-                    </View>
-                </Modal>
-                <Toast config={{ error: ({ text1 }) => <CustomToast text1 = {text1}/>}} 
-                ref={(ref) => Toast.setRef(ref)} />
-            </KeyboardAvoidingView>
+            </View>
         )
     }
 }

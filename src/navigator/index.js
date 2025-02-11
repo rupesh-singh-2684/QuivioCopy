@@ -16,6 +16,9 @@ import AddPhone from "../screens/addPhone";
 import TwoFA from "../screens/2fa";
 import Otp from "../screens/otp";
 import BottomTab from "./bottomtab";
+import SetupAccount from "../screens/2fa/components/account setup";
+import Login from "../screens/login/Login";
+import ProfileUpdate from "../screens/account/profileupdate";
 
 
 
@@ -27,8 +30,13 @@ export default class RootNavigator extends Component {
         <Stack.Navigator
           screenOptions={{
             animation: 'slide_from_bottom',
-          }} initialRouteName="Splash"
+          }} initialRouteName="ProfileUpdate"
         >
+          <Stack.Screen
+            component={Login}
+            name={'Login'}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen
             component={Splash}
             name={ScreenNames.Splash}
@@ -67,6 +75,16 @@ export default class RootNavigator extends Component {
           <Stack.Screen
             component={BottomTab}
             name={ScreenNames.BottomTab}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            component={SetupAccount}
+            name={ScreenNames.SetupAccount}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            component={ProfileUpdate}
+            name={ScreenNames.ProfileUpdate}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

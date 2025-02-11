@@ -16,6 +16,9 @@ const ScreenNames = {
     Account: 'Account',
     Favorites: 'Favorites',
     Menu: 'Menu',
+    SetupAccount: 'SetupAccount',
+    ProfileUpdate: 'ProfileUpdate'
+
   };
   
   export {ScreenNames};

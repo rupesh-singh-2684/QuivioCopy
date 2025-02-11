@@ -67,8 +67,35 @@ const Images = {
 
         TimerHome: require('/Users/admin/Desktop/QuivioUI/src/assets/images/TimerHome.png'),
 
-        FullImg: require('/Users/admin/Desktop/QuivioUI/src/assets/images/image.png')
+        FullImg: require('/Users/admin/Desktop/QuivioUI/src/assets/images/image.png'),
 
+        NameIcon: require('/Users/admin/Desktop/QuivioUI/src/assets/images/NameIcon.png'),
+
+        AccountProfile: require('/Users/admin/Desktop/QuivioUI/src/assets/images/AccountProfile.png'),
+
+        AccountProfile2: require('/Users/admin/Desktop/QuivioUI/src/assets/images/AccountProfile2.png'),
+
+        AccountCustomer: require('/Users/admin/Desktop/QuivioUI/src/assets/images/AccountCustomer.png'),
+
+        AccountHelpAndSupport: require('/Users/admin/Desktop/QuivioUI/src/assets/images/AccountHelpandSupport.png'),
+
+        AccountLogOut: require('/Users/admin/Desktop/QuivioUI/src/assets/images/AccountLogOut.png'),
+
+        ProfileMainImg: require('/Users/admin/Desktop/QuivioUI/src/assets/images/ProfileMainImg.png'),
+
+        ProfileBackgound: require('/Users/admin/Desktop/QuivioUI/src/assets/images/ProfileBackgroung.png'),
+
+        Calender: require('/Users/admin/Desktop/QuivioUI/src/assets/images/Calender.png'),
+
+        DropDown: require('/Users/admin/Desktop/QuivioUI/src/assets/images/DropIcon.png'),
+
+        ForArrow: require('/Users/admin/Desktop/QuivioUI/src/assets/images/forArrow.png'),
+
+        Imgage1RB: require('/Users/admin/Desktop/QuivioUI/src/assets/images/Image1RB.png'),
+
+        Imgage2RB: require('/Users/admin/Desktop/QuivioUI/src/assets/images/Image2RB.png'),
+
+        Imgage3RB: require('/Users/admin/Desktop/QuivioUI/src/assets/images/Image3RB.png'),
 
 
 

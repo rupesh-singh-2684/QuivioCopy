@@ -19,6 +19,10 @@ export default class TwoFA extends Component {
         navigation.navigate('AddPhone');
     };
 
+    handleNav = () => {
+        const { navigation } = this.props;
+        navigation.navigate('SetupAccount')
+    }
     render() {
         const { isModalVisible } = this.state;
         return (
@@ -65,13 +69,15 @@ export default class TwoFA extends Component {
                     </View>
                 </Modal>
                 <View style={styles.subCont}>
+                    <TouchableOpacity onPress={this.handleNav}>
                     <View style={styles.setupView}>
                         <Image source={Images.Homesetting} style={styles.sett}/>
-                        <View  style={styles.textView}>
+                        <View  style={styles.textView} >
                             <Text style={styles.text1}>Complete your account setup</Text>
                             <Text style={styles.text2}>Tap to continue</Text>
                         </View>
                     </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
                 <Text style={styles.text3}>FREQUENTLY USED</Text>

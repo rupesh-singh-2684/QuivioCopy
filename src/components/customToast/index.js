@@ -3,6 +3,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import Toast from 'react-native-toast-message';
 import styles from './styles';
 import Images from '../../assets/images';
+import Icons from '../../assets/icons';
 
 
 class CustomToast extends Component {
@@ -12,7 +13,7 @@ class CustomToast extends Component {
     return (
       <View style={styles.toastContainer}>
         <View style={styles.toastContent}>
-          <Image source={require('/Users/admin/Desktop/QuivioUI/src/assets/icons/error.png')} style={styles.icon} />
+          <Image source={Icons.error} style={styles.icon} />
           <Text style={styles.toastText}>{text1}</Text>
         </View>
       </View>

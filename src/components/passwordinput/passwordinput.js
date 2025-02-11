@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, Image, TextInput, StyleSheet, TouchableOpacity ,Text} from "react-native";
 import styles from "./styles";
+import Icons from "../../assets/icons";
 
 export default class PasswordInput extends Component {
     constructor(props) {
@@ -15,7 +16,7 @@ export default class PasswordInput extends Component {
             <View style={[styles.container, !isValid && styles.errorBorder]}>
                 <View style={styles.container2}>
                     <Image
-                        source={require('/Users/admin/Desktop/QuivioUI/src/assets/icons/pass.png')}
+                        source={this.props.img}
                         style={[styles.img, !isValid && styles.errorIcon]}
                     />
                     <TextInput
